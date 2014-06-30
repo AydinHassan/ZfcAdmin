@@ -54,12 +54,11 @@ return array(
     /**
      * Default ZfcRbac configuration for RBAC
      */
-    'zfcrbac' => array(
-        'firewall_route' => true,
-        'firewalls' => array(
-            'ZfcRbac\Firewall\Route' => array(
-                'zfcadmin' => array('route' => '^zfcadmin/*', 'roles' => 'admin')
-            )
-        ),
-    ),
+    'zfc_rbac' => [
+        'guards' => [
+            'ZfcRbac\Guard\RouteGuard' => [
+                'zfcadmin*'  => ['admin'],
+            ]
+        ],
+    ],
 );

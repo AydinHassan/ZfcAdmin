@@ -51,9 +51,11 @@ return array(
         'admin_layout_template' => 'layout/admin',
     ),
 
-    'navigation' => array(
-        'admin' => array(),
-    ),
+    'spiffy_navigation' => [
+        'containers' => [
+            'admin' => []
+        ],
+    ],
 
     'router' => array(
         'routes' => array(
@@ -70,8 +72,6 @@ return array(
             ),
         ),
     ),
-
-    
 
     'view_manager' => array(
         'template_path_stack' => array(

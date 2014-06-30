@@ -30,11 +30,7 @@
           </a>
           <a class="brand" href="<?php echo $this->url('zfcadmin') ?>">ZfcAdmin</a>
           <div class="nav-collapse">
-            <?php echo $this->navigation('admin_navigation')
-                            ->menu()
-                            ->setUlClass('nav')
-                            ->setMaxDepth(0)
-                            ->setRenderInvisible(false)?>
+              <?php echo $this->navigationMenu()->renderMenu('admin', ['ulClass' => 'nav navbar-nav']); ?>
           </div><!--/.nav-collapse -->
         </div>
       </div>
